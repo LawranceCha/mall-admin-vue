@@ -1,7 +1,7 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 生成数据列表
-var dataList = []
+var dataList = [];
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   dataList.push(Mock.mock({
     'userId': '@increment',
@@ -12,7 +12,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
     'roleIdList': null,
     'createUserId': 1,
     'createTime': 'datetime'
-  }))
+  }));
 }
 
 // 获取用户列表
@@ -32,7 +32,7 @@ export function list () {
         'list': dataList
       }
     }
-  }
+  };
 }
 
 // 获取用户信息
@@ -46,7 +46,7 @@ export function info () {
       'code': 0,
       'user': dataList[0]
     }
-  }
+  };
 }
 
 // 修改密码
@@ -59,7 +59,7 @@ export function updatePassword () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 添加用户
@@ -72,7 +72,7 @@ export function add () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 修改用户
@@ -85,7 +85,7 @@ export function update () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除用户
@@ -98,5 +98,5 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

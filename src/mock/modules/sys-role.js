@@ -1,7 +1,7 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 生成数据列表
-var dataList = []
+var dataList = [];
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   dataList.push(Mock.mock({
     'roleId': '@increment',
@@ -10,7 +10,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
     'createUserId': 1,
     'menuIdList': '@range(1, 10, 2)',
     'createTime': '@datetime'
-  }))
+  }));
 }
 
 // 获取角色列表
@@ -30,7 +30,7 @@ export function list () {
         'list': dataList
       }
     }
-  }
+  };
 }
 
 // 获取角色列表, 根据当前用户
@@ -44,7 +44,7 @@ export function select () {
       'code': 0,
       'list': dataList
     }
-  }
+  };
 }
 
 // 获取角色信息
@@ -58,7 +58,7 @@ export function info () {
       'code': 0,
       'role': dataList[0]
     }
-  }
+  };
 }
 
 // 添加角色
@@ -71,7 +71,7 @@ export function add () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 修改角色
@@ -84,7 +84,7 @@ export function update () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除角色
@@ -97,5 +97,5 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

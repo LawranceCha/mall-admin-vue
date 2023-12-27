@@ -20,31 +20,31 @@ export default {
   },
   mutations: {
     updateDocumentClientHeight (state, height) {
-      state.documentClientHeight = height
+      state.documentClientHeight = height;
     },
     updateNavbarLayoutType (state, type) {
-      state.navbarLayoutType = type
+      state.navbarLayoutType = type;
     },
     updateSidebarLayoutSkin (state, skin) {
-      state.sidebarLayoutSkin = skin
+      state.sidebarLayoutSkin = skin;
     },
     updateSidebarFold (state, fold) {
-      state.sidebarFold = fold
+      state.sidebarFold = fold;
     },
     updateMenuList (state, list) {
-      state.menuList = list
+      state.menuList = list.sort((a, b) => { return a.orderNum - b.orderNum; });
     },
     updateMenuActiveName (state, name) {
-      state.menuActiveName = name
+      state.menuActiveName = name;
     },
     updateContentIsNeedRefresh (state, status) {
-      state.contentIsNeedRefresh = status
+      state.contentIsNeedRefresh = status;
     },
     updateMainTabs (state, tabs) {
-      state.mainTabs = tabs
+      state.mainTabs = tabs;
     },
     updateMainTabsActiveName (state, name) {
-      state.mainTabsActiveName = name
+      state.mainTabsActiveName = name;
     }
   }
-}
+};

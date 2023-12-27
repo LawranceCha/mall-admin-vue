@@ -1,14 +1,14 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 生成数据列表
-var dataList = []
+var dataList = [];
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   dataList.push(Mock.mock({
     'id': '@increment',
     'paramKey': '@first',
     'paramValue': '@last',
     'remark': '@csentence'
-  }))
+  }));
 }
 
 // 获取参数列表
@@ -28,7 +28,7 @@ export function list () {
         'list': dataList
       }
     }
-  }
+  };
 }
 
 // 获取参数信息
@@ -42,7 +42,7 @@ export function info () {
       'code': 0,
       'config': dataList[0]
     }
-  }
+  };
 }
 
 // 添加参数
@@ -55,7 +55,7 @@ export function add () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 修改参数
@@ -68,7 +68,7 @@ export function update () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除参数
@@ -81,5 +81,5 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

@@ -10,7 +10,7 @@ module.exports = {
     browser: true,
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-  extends: 'standard',
+  extends: [],
   // required to lint *.vue files
   plugins: [
     'html'
@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
+    "semi": [2, "always"],//语句强制分号结尾
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }

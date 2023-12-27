@@ -1,4 +1,4 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 登录
 export function login () {
@@ -12,7 +12,7 @@ export function login () {
       'expire': Mock.Random.natural(60 * 60 * 1, 60 * 60 * 12),
       'token': Mock.Random.string('abcdefghijklmnopqrstuvwxyz0123456789', 32)
     }
-  }
+  };
 }
 
 // 退出
@@ -25,5 +25,5 @@ export function logout () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

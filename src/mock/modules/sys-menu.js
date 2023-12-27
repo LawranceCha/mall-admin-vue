@@ -377,7 +377,7 @@ var dataList = [
     'open': null,
     'list': null
   }
-]
+];
 var navDataList = [
   {
     'menuId': 1,
@@ -497,7 +497,7 @@ var navDataList = [
       }
     ]
   }
-]
+];
 
 // 获取导航菜单列表 / 权限
 export function nav () {
@@ -545,7 +545,7 @@ export function nav () {
         'sys:oss:all'
       ]
     }
-  }
+  };
 }
 
 // 获取菜单列表
@@ -555,13 +555,13 @@ export function list () {
     url: '/sys/menu/list',
     type: 'get',
     data: dataList
-  }
+  };
 }
 
 // 获取上级菜单
 export function select () {
-  let dataList = JSON.parse(JSON.stringify(navDataList))
-  dataList = dataList.concat(dataList[0].list)
+  let dataList = JSON.parse(JSON.stringify(navDataList));
+  dataList = dataList.concat(dataList[0].list);
   return {
     // isOpen: false,
     url: '/sys/menu/select',
@@ -571,7 +571,7 @@ export function select () {
       'code': 0,
       'menuList': dataList
     }
-  }
+  };
 }
 
 // 获取菜单信息
@@ -585,7 +585,7 @@ export function info () {
       'code': 0,
       'menu': dataList[0]
     }
-  }
+  };
 }
 
 // 添加菜单
@@ -598,7 +598,7 @@ export function add () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 修改菜单
@@ -611,7 +611,7 @@ export function update () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除菜单
@@ -624,5 +624,5 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

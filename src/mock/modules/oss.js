@@ -1,13 +1,13 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 生成数据列表
-var dataList = []
+var dataList = [];
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
   dataList.push(Mock.mock({
     'id': '@increment',
     'url': 'http://oapk0ekso.bkt.clouddn.com/upload/@date("yyyyMMdd")/@guid().png',
     'createDate': '@datetime'
-  }))
+  }));
 }
 
 // 获取文件列表
@@ -27,7 +27,7 @@ export function list () {
         'list': dataList
       }
     }
-  }
+  };
 }
 
 // 获取云存储配置信息
@@ -61,7 +61,7 @@ export function config () {
         'qcloudRegion': null
       }
     }
-  }
+  };
 }
 
 // 保存云存储配置信息
@@ -74,7 +74,7 @@ export function addConfig () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除文件
@@ -87,5 +87,5 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

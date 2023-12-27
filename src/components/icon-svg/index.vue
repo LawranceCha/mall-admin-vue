@@ -28,17 +28,17 @@
     },
     computed: {
       getName () {
-        return `#icon-${this.name}`
+        return `#icon-${this.name}`;
       },
       getClassName () {
         return [
           'icon-svg',
           `icon-svg__${this.name}`,
           this.className && /\S/.test(this.className) ? `${this.className}` : ''
-        ]
+        ];
       }
     }
-  }
+  };
 </script>
 
 <style>

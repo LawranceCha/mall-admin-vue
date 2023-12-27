@@ -1,9 +1,9 @@
-import Mock from 'mockjs'
+import Mock from 'mockjs';
 
 // 生成数据列表
-var dataList = []
+var dataList = [];
 for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
-  let name = Mock.Random.name()
+  let name = Mock.Random.name();
   dataList.push(Mock.mock({
     'jobId': '@increment',
     'beanName': name,
@@ -13,7 +13,7 @@ for (let i = 0; i < Math.floor(Math.random() * 10 + 1); i++) {
     'status': 1,
     'remark': '@csentence',
     'createTime': '@datetime'
-  }))
+  }));
 }
 
 // 获取定时任务列表
@@ -33,7 +33,7 @@ export function list () {
         'list': dataList
       }
     }
-  }
+  };
 }
 
 // 获取定时任务信息
@@ -47,7 +47,7 @@ export function info () {
       'code': 0,
       'user': dataList[0]
     }
-  }
+  };
 }
 
 // 添加定时任务
@@ -60,7 +60,7 @@ export function add () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 修改定时任务
@@ -73,7 +73,7 @@ export function update () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 删除定时任务
@@ -86,7 +86,7 @@ export function del () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 运行定时任务
@@ -99,7 +99,7 @@ export function run () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 暂停定时任务
@@ -112,7 +112,7 @@ export function pause () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }
 
 // 恢复定时任务
@@ -125,5 +125,5 @@ export function resume () {
       'msg': 'success',
       'code': 0
     }
-  }
+  };
 }

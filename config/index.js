@@ -12,16 +12,22 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     // 代理列表, 是否开启代理通过[./dev.env.js]配置
-    proxyTable: devEnv.OPEN_PROXY === false ? {} : {
-      '/proxyApi': {
-        target: 'http://demo.renren.io/mall-admin/',
+    // proxyTable: devEnv.OPEN_PROXY === false ? {} : {
+    //   '/proxyApi': {
+    //     target: 'http://demo.renren.io/mall-admin/',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/proxyApi': '/'
+    //     }
+    //   },
+    // },
+    proxyTable: {
+       '/^(http:\/\/192.168.31.159:9001).*': {
+        target: 'http://192.168.31.159:9001',
         changeOrigin: true,
-        pathRewrite: {
-          '^/proxyApi': '/'
-        }
+        secure: false
       }
     },
-
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8001, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
